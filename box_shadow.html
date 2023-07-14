@@ -1,0 +1,56 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: brown;
+            --custom-width: 330px;
+        }
+
+        .container {
+            background-color: beige;
+            height: 650px;
+            border: 2x solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: var(--custom-width);
+            height: 330px;
+            border: 1px solid var(--primary-color);
+            margin: 5px;
+            padding: 5px;
+            /* box-shadow: x-offset y-offset blur-radius spread-radius color; */
+            /* box-shadow: 10px 5px 5px 20px brown; */
+            /* box-shadow: inset 10px 5px 5px 20px brown; */
+            box-shadow: 10px 15px red, 15px 8px var(--primary-color);
+        }
+        #head1 {
+            /* text-shadow: 12px 13px 2px wheat; */
+            /* text-shadow: white 12px 13px 2px; */
+            text-shadow: 12px 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="./resources/logo.png" />
+            <h2 id="head1">Welcome to CodeHelp</h2>
+            <p>
+                Hi Khilan Unadkat
+                Billionaire
+            </p>
+        </div>
+    </div>
+</body>
+</html>
